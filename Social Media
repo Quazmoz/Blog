@@ -1,0 +1,39 @@
+<style>
+
+.logo{
+padding-left:10px;
+padding-right:10px;
+}
+
+.twitter-share-button{
+    position: relative;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 1px 8px 1px 6px;
+    background-color: #1b95e0;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;    
+}
+i{
+position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: transparent 0 0 no-repeat;
+    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg…-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);}
+</style>
+<a class="logo" href="https://www.instagram.com/quazmoz/?hl=en" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/5am3gistyb0h6ee/instagram-icon-png.png"  height="42" width="42" /></a>
+
+<a class="logo" href="https://www.facebook.com/quinn.favo" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/2ktpurzdbkm1ij0/facebook_logos_PNG19758.png"  height="42" width="42" /></a>
+
+<a class="logo"  href="https://www.youtube.com/channel/UC3NzjW2yriAIpuvjrj6Tr-Q" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/zn2rudnjsl9lzik/youtube%20logo.png"  height="42" width="42" /></a>
+<br />
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet<i></i></a>
