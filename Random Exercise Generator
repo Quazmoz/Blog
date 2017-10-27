@@ -1,5 +1,26 @@
+<style>
+#button_style{
+  background-color:rgb(20, 200, 200);
+  align-items:center;
+  position: relative;
+  top: 15px;
+  left: 8px;
+}
+#jsgif{
+  position: relative;
+  top: 15px;
+  left: 8px;
+}
+</style>
+
+<div id = "jsgif">
+  
+</div>
+<input id = "button_style" onclick="window.location.reload()" style="font-family: &quot;arimo&quot;; font-size: 30px; height: 100%; text-align: center; white-space: normal; width: 270px;" type="button" value="Click here or reload the page for another exercise!" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 <script type="text/javascript">
-var total_images = 8;
+var total_images = 14;
 var random_number = Math.floor((Math.random()*total_images));
 var random_img = new Array();
 random_img[0] = '<a href="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"><img src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>';
@@ -17,7 +38,6 @@ random_img[11] = '<a href="https://4.bp.blogspot.com/-6-fbmqPrraM/WKtgbHqNlUI/AA
 random_img[12] = '<a href="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"><img src="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"></a>';
 random_img[13] = '<a href="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"><img src="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"></a>';
 random_img[14] = '<a href="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"><img src="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"></a>';
-document.write(random_img[random_number]);
-</script>
+$("#jsgif").html(random_img[random_number]);
 
-<input onclick="window.location.reload()" style="font-family: &quot;arimo&quot;; font-size: 30px; height: 100%; text-align: center; white-space: normal; width: 250px;" type="button" value="Click here or reload the page for another exercise!" />
+</script>
