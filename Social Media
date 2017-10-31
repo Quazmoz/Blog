@@ -1,26 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-.logo{
-padding-left:10px;
-padding-right:10px;
+#insta:hover{
+    color: #fb3958;
 }
 
-.twitter-follow-button{
-    padding-top: 10px;
+#fb:hover{
+    color:#3b5998;
 }
-i{
-position: relative;
-    top: 2px;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: transparent 0 0 no-repeat;
-    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg…-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);}
+
+#yt:hover{
+    color:#bb0000;
+}
+
+#linked_in:hover{
+    color:#0077B5;
+}
+
+div.social_media {
+}
+
 </style>
-<a class="logo" href="https://www.instagram.com/quazmoz/?hl=en" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/5am3gistyb0h6ee/instagram-icon-png.png"  height="42" width="42" /></a>
 
-<a class="logo" href="https://www.facebook.com/quinn.favo" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/2ktpurzdbkm1ij0/facebook_logos_PNG19758.png"  height="42" width="42" /></a>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<a class="logo"  href="https://www.youtube.com/channel/UC3NzjW2yriAIpuvjrj6Tr-Q" target = "_blank"> <img src="https://dl.dropboxusercontent.com/s/zn2rudnjsl9lzik/youtube%20logo.png"  height="42" width="42" /></a>
+<div class = "social_media">
+<a href="https://www.instagram.com/quazmoz/?hl=en" target = "_blank">
+    <i id = "insta" class="fa fa-instagram" style = "font-size: 48px"></i>
+</a>
+</div>
+
+<div class = "social_media">
+<a href="https://www.facebook.com/quinn.favo" target = "_blank">
+    <i id = "fb" class="fa fa-facebook-official" aria-hidden="true" style = "font-size: 48px"></i>
+</a>
+</div>
+
+<div class = "social_media">
+<a href="https://www.youtube.com/channel/UC3NzjW2yriAIpuvjrj6Tr-Q" target = "_blank">
+    <i id = "yt" class="fa fa-youtube-play" aria-hidden="true" style = "font-size: 48px"></i>
+</a>
+</div>
+
+<div class = "social_media">
+<a href="https://www.linkedin.com/in/quinnfavo" target = "_blank">
+    <i id = "linked_in" class="fa fa-linkedin-square" aria-hidden="true" style = "font-size: 48px"></i>
+</a>
+</div>
+
 <br />
+
 <a href="https://twitter.com/Quazmoz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @Quazmoz</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<div class="fb-share-button" data-href="https://quazmoz.blogspot.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fquazmoz.blogspot.com%2F&amp;src=sdkpreparse">Share</a></div>
