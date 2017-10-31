@@ -1,50 +1,52 @@
-<!DOCTYPE html>
-<!-- This is based on DillingerLee's great template here:
-https://github.com/Team-Code/KA_Offline -->
-<html> 
- <head>
-    <title>Processing.JS inside Webpages: Template</title> 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title></title>
+
+<style>
+	img{
+		width: 200px;
+	}
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- HTML5 Support for old ie browsers -->
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
- <body>
-    <p align="center"> 
-	<!--This draws the Canvas on the webpage -->
-      <canvas id="mycanvas"></canvas> 
-    </p>
- </body>
- 
- <!-- Run all the JavaScript stuff -->
- <!-- Include the processing.js library -->
- <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
- <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
- 
- <script>
-    var sketchProc = function(processingInstance) {
-     with (processingInstance) {
-        size(400, 400); 
-        frameRate(30);
-        
-        // ProgramCodeGoesHere
-        fill(255, 255, 0);
-        ellipse(200, 200, 200, 200);
-        noFill();
-        stroke(0, 0, 0);
-        strokeWeight(2);
-        arc(200, 200, 150, 100, 0, PI);
-        fill(0, 0, 0);
-        ellipse(250, 200, 10, 10);
-        ellipse(153, 200, 10, 10);
 
-         // @pjs preload must be used to preload the image
+<body>
 
-    	/* @pjs preload="https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif"; */
+<!--Placeholders for exercises-->
+<div>
+	<a><img id = "exercise_1" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
+</div>
 
-    image("https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif", 50, 50, width/2, height/2);
-    }};
+<div id = "exercise_2">
+</div>
 
-    // Get the canvas that Processing-js will use
-    var canvas = document.getElementById("mycanvas"); 
-    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
-    var processingInstance = new Processing(canvas, sketchProc); 
- </script>
+<div id = "exercise_3">
+</div>
 
-</html>
+<div id = "exercise_4">
+</div>
+
+<div id = "exercise_5">
+</div>
+
+<div onclick="putExercise();">
+<a><img id = "db_bench_neutral" src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
+</div>
+
+<!-- Javascript Start -->
+<script>
+
+function putExercise(){
+	$("#exercise_1").attr("src", "https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif");
+}
+
+</script>
+
+</body>
