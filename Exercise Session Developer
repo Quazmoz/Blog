@@ -8,6 +8,9 @@
 	img{
 		width: 200px;
 	}
+	div{
+		display:inline-block;
+	}
 </style>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -20,32 +23,121 @@
 <body>
 
 <!--Placeholders for exercises-->
-<div>
-	<a><img id = "exercise_1" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
+<div onclick="blockSelect(0);">
+	<a><img class = "ex_list" id = "exercise_1" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
-<div id = "exercise_2">
+<div onclick="blockSelect(1);">
+	<a><img class = "ex_list" id = "exercise_2" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
-<div id = "exercise_3">
+<div onclick="blockSelect(2);">
+	<a><img class = "ex_list" id = "exercise_3" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
-<div id = "exercise_4">
+<div onclick="blockSelect(3);">
+	<a><img class = "ex_list" id = "exercise_4" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
-<div id = "exercise_5">
+<div onclick="blockSelect(4);">
+	<a><img class = "ex_list" id = "exercise_5" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
+</div>
+
+<div onclick="blockSelect(5);">
+	<a><img class = "ex_list" id = "exercise_6" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
 <div onclick="putExercise();">
 <a><img id = "db_bench_neutral" src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
 </div>
 
+<div onclick="putExercise();">
+<a><img id = "wall_sit" src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
+</div>
+
 <!-- Javascript Start -->
 <script>
+	var done_1;
+	var done;
+if (typeof activeGif === undefined){
+	var activeGif;
+}
+
+$("img").mouseover(function(){
+		activeGif = $(this).attr("src");
+		console.log(activeGif);
+	})
+
+if (done != 0 || done != 1 || done != 2 || done != 3 || done != 4 || done != 5){
+	done = 0;
+
+	console.log(done);
+}
+
+function blockSelect(done){
+	return done;
+}
 
 function putExercise(){
-	$("#exercise_1").attr("src", "https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif");
+
+switch(done) {
+    case 0:
+        $("#exercise_1").attr("src", activeGif);
+        done += 1;
+        break;
+    case 1:
+        $("#exercise_2").attr("src", activeGif);
+        done += 1;
+        break;
+    case 2:
+        $("#exercise_3").attr("src", activeGif);
+        done += 1;
+        break;
+    case 3:
+        $("#exercise_4").attr("src", activeGif);
+        done += 1;
+        break;
+    case 4:
+        $("#exercise_5").attr("src", activeGif);
+        done += 1;
+        break;
+    default:
+        $("#exercise_6").attr("src", activeGif);
+        console.log(done);
 }
+}
+
+	/* failed attempt at iteration
+
+	$(".ex_list").each(function(){
+	if (($(this).attr("src")) != "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"){
+		document.write("test");
+	}
+}*/
+
+	/*if ($("#exercise_1").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 0){
+		$("#exercise_1").attr("src", "activeGif");
+		done = 1;
+		return done;
+	}	else if ($("#exercise_2").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 1){
+		$("#exercise_2").attr("src", "activeGif");
+		done += 1;
+		return done;
+	}	else if ($("#exercise_3").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 2){
+		$("#exercise_3").attr("src", "activeGif");
+		done += 1;
+		return done;
+	}	else if ($("#exercise_4").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 3){
+		$("#exercise_4").attr("src", "activeGif");
+		done += 1;
+		return done;
+	}	else if ($("#exercise_5").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 4){
+		$("#exercise_5").attr("src", "activeGif");
+		done += 1;
+		return done;
+	}*/
+
+
 
 </script>
 
