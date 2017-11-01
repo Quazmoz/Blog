@@ -47,6 +47,9 @@
 	<a><img class = "ex_list" id = "exercise_6" src="https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png"></a>
 </div>
 
+<br>
+
+<!-- Exercises to be chosen and placed into placeholders -->
 <div onclick="putExercise();">
 <a><img id = "db_bench_neutral" src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
 </div>
@@ -55,29 +58,60 @@
 <a><img id = "wall_sit" src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
 </div>
 
+<div onclick="putExercise();">
+<a><img src="https://2.bp.blogspot.com/-NmLWWhs74Lc/WfihU2zVqgI/AAAAAAAAlw8/Lns7QrXT288jiK9w4Yr6nMELhfkA2XRqgCLcBGAs/s1600/Lunge%2Bwith%2Btorso%2Brotation%2BQuinn%2B_1.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://4.bp.blogspot.com/-eaOdMDY_9mQ/WfihVLD62zI/AAAAAAAAlxA/VMgptWiFm4QSt4lkAom8An5kYzc9zk0QgCLcBGAs/s400/Physioball%2Bhip%2Bthrusters_1.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://3.bp.blogspot.com/-3hIwJGH1s0A/WfihXUhTjGI/AAAAAAAAlxM/-gD_Oy6dB7Q-xb2o9gWri4adVx-YK0TgwCLcBGAs/s400/Quinn%2Bsingle%2BDB%2Boverhead%2Bpress_1.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://1.bp.blogspot.com/-S7Q-AdDH-iA/WfihYRFJHiI/AAAAAAAAlxQ/Q7TM2s0D3ZwtpFGb61okCDtyWbYw4GwRgCLcBGAs/s400/Quinn%2Bsupinated%2Brow_1.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://1.bp.blogspot.com/-ZL0prZiS5zs/WZwnLhA-FEI/AAAAAAAAedo/bBzrUQk2Mtwd8_wdZnjuQnSDHkLrKJgGQCLcBGAs/s1600/lunge%2Bwith%2Bbag.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://4.bp.blogspot.com/-eLYw_E-uXko/WZwnYP2v5gI/AAAAAAAAeds/ufupVPenXBUl_HMMS9OOyeT40j54QidFgCLcBGAs/s1600/front%2Bangle%2Badductors.gif"></a>
+</div>
+
+<div onclick="putExercise();">
+<a><img src="https://3.bp.blogspot.com/-9t1Y5Z0Fvp8/WZwoSdgah1I/AAAAAAAAeeE/lCymndM2xpM683pe8lw5_IVKe8VA0H1hQCLcBGAs/s320/hamstring%2Bglute%2Bbridge%2BQuinn.gif"></a>
+</div>
+
 <!-- Javascript Start -->
 <script>
-	var done_1;
-	var done;
+
+//declare variables
 if (typeof activeGif === undefined){
 	var activeGif;
 }
 
+var done;
+
+if (done != 0 || done != 1 || done != 2 || done != 3 || done != 4 || done != 5){
+	done = 0;
+}
+
+//image selector function, grabs href from mouse position
 $("img").mouseover(function(){
 		activeGif = $(this).attr("src");
 		console.log(activeGif);
 	})
 
-if (done != 0 || done != 1 || done != 2 || done != 3 || done != 4 || done != 5){
-	done = 0;
-
-	console.log(done);
+//reassigns putExercise function target based on user input
+function blockSelect(done_1){
+	done = done_1;
 }
 
-function blockSelect(done){
-	return done;
-}
-
+//fill img with user choice using function
 function putExercise(){
 
 switch(done) {
@@ -115,6 +149,7 @@ switch(done) {
 	}
 }*/
 
+//previous if statements attempt - replaced with switch above
 	/*if ($("#exercise_1").attr("src") == "https://cdn.pixabay.com/photo/2014/03/24/13/40/dumbbells-293955_960_720.png" && done == 0){
 		$("#exercise_1").attr("src", "activeGif");
 		done = 1;
@@ -136,8 +171,6 @@ switch(done) {
 		done += 1;
 		return done;
 	}*/
-
-
 
 </script>
 
