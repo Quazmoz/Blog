@@ -18,15 +18,15 @@
 	img.placehold:active{
 		border-style: dotted;
 	}
-	.title_block{
-		font-size: 23px;
+	button {
+    	font-size: 23px;
 	    padding: 0px 4px;
 	    margin: 0 auto -1.5rem auto;
 	    line-height: 50px;
 	    max-width: 50%;
-	    background-color: rgba(0,0,0,.4);
-    	border-color: transparent;
+	    background-color: rgba(0,20,200,.4);
     	border-radius: 10px;
+
 	}
 </style>
 
@@ -69,39 +69,45 @@
 
 <!-- Exercises to be chosen and placed into placeholders -->
 <button onclick="putPics();">
-Load Images (WARNING! High bandwidth and RAM usage)
+Load All Images (WARNING! High bandwidth and RAM usage)
 </button>
 
-<div class = "title_block">
+<button class = "lower_body_title" onclick="putLowerPics();">
 Lower Body Exercises
-</div>
+</button>
+
+<br>
+
+<button class = "upper_body_title" onclick="putUpperPics();">
+Upper Body Exercises
+</button>
 
 <br>
 <br>
 
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = "" id = "db_bench_neutral"  data-src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
+<a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = "" id = "db_bench_neutral"  data-src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "wall_sit" data-src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "wall_sit" data-src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "lunge_rotation" data-src="https://2.bp.blogspot.com/-NmLWWhs74Lc/WfihU2zVqgI/AAAAAAAAlw8/Lns7QrXT288jiK9w4Yr6nMELhfkA2XRqgCLcBGAs/s1600/Lunge%2Bwith%2Btorso%2Brotation%2BQuinn%2B_1.gif"></a>
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "lunge_rotation" data-src="https://2.bp.blogspot.com/-NmLWWhs74Lc/WfihU2zVqgI/AAAAAAAAlw8/Lns7QrXT288jiK9w4Yr6nMELhfkA2XRqgCLcBGAs/s1600/Lunge%2Bwith%2Btorso%2Brotation%2BQuinn%2B_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "pb_thrust" data-src="https://4.bp.blogspot.com/-eaOdMDY_9mQ/WfihVLD62zI/AAAAAAAAlxA/VMgptWiFm4QSt4lkAom8An5kYzc9zk0QgCLcBGAs/s400/Physioball%2Bhip%2Bthrusters_1.gif"></a>
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "pb_thrust" data-src="https://4.bp.blogspot.com/-eaOdMDY_9mQ/WfihVLD62zI/AAAAAAAAlxA/VMgptWiFm4QSt4lkAom8An5kYzc9zk0QgCLcBGAs/s400/Physioball%2Bhip%2Bthrusters_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "singledb_overhead" data-src="https://3.bp.blogspot.com/-3hIwJGH1s0A/WfihXUhTjGI/AAAAAAAAlxM/-gD_Oy6dB7Q-xb2o9gWri4adVx-YK0TgwCLcBGAs/s400/Quinn%2Bsingle%2BDB%2Boverhead%2Bpress_1.gif"></a>
+<a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = ""  id = "singledb_overhead" data-src="https://3.bp.blogspot.com/-3hIwJGH1s0A/WfihXUhTjGI/AAAAAAAAlxM/-gD_Oy6dB7Q-xb2o9gWri4adVx-YK0TgwCLcBGAs/s400/Quinn%2Bsingle%2BDB%2Boverhead%2Bpress_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "supinated_row" data-src="https://1.bp.blogspot.com/-S7Q-AdDH-iA/WfihYRFJHiI/AAAAAAAAlxQ/Q7TM2s0D3ZwtpFGb61okCDtyWbYw4GwRgCLcBGAs/s400/Quinn%2Bsupinated%2Brow_1.gif"></a>
+<a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = ""  id = "supinated_row" data-src="https://1.bp.blogspot.com/-S7Q-AdDH-iA/WfihYRFJHiI/AAAAAAAAlxQ/Q7TM2s0D3ZwtpFGb61okCDtyWbYw4GwRgCLcBGAs/s400/Quinn%2Bsupinated%2Brow_1.gif"></a>
 </div>
 <!--
 <div class = "ex_block" onclick="putExercise();">
@@ -286,6 +292,16 @@ Lower Body Exercises
 function putPics(){
     $(function() {
         $('.lazy').lazy();
+    });
+}
+function putLowerPics(){
+	$(function() {
+        $('.lower_exercises').lazy();
+    });
+}
+function putUpperPics(){
+	$(function() {
+        $('.upper_exercises').lazy();
     });
 }
 </script>
