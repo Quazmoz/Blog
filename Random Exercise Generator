@@ -29,6 +29,7 @@
 
 <!-- Javascript start -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
 <script type="text/javascript">
 
 // Exercise gif replacement function 
@@ -54,4 +55,4 @@ random_img[13] = '<a href="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AA
 random_img[14] = '<a href="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"><img src="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"></a>';
 $("#jsgif").html(random_img[random_number]);
 }
-imgGen();
+imgGen();</script>
