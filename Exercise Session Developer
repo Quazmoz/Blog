@@ -6,7 +6,7 @@
 	<title></title>
 
 <style>
-	img.placehold{
+	.placehold{
 		width: 150px;
 	}
 	img.exercise_gif{
@@ -15,8 +15,12 @@
 	div.ex_block{
 		display:inline-block;
 	}
-	img.placehold:active{
-		border-style: dotted;
+	#exercise_1:hover, #exercise_2:hover, #exercise_3:hover, #exercise_4:hover, #exercise_5:hover, #exercise_6:hover{
+		-webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+        -webkit-transition-duration: .3s; /* Safari */
+    	transition-duration: .3s;
 	}
 	button {
     	font-size: 23px;
@@ -40,30 +44,30 @@
 
 <body>
 
-<!--Placeholders for exercises-->
-<div class="ex_block" onclick="blockSelect(0);">
-	<a><img class = "placehold" id = "exercise_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<!--Placeholders for exercises-->
+	<div class="ex_block" onclick="blockSelect(0);">
+		<a><img class = "placehold" id = "exercise_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
-<div class="ex_block" onclick="blockSelect(1);">
-	<a><img class = "placehold" id = "exercise_2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<div class="ex_block" onclick="blockSelect(1);">
+		<a><img class = "placehold" id = "exercise_2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
-<div class="ex_block" onclick="blockSelect(2);">
-	<a><img class = "placehold" id = "exercise_3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<div class="ex_block" onclick="blockSelect(2);">
+		<a><img class = "placehold" id = "exercise_3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
-<div class="ex_block" onclick="blockSelect(3);">
-	<a><img class = "placehold" id = "exercise_4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<div class="ex_block" onclick="blockSelect(3);">
+		<a><img class = "placehold" id = "exercise_4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
-<div class="ex_block" onclick="blockSelect(4);">
-	<a><img class = "placehold" id = "exercise_5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<div class="ex_block" onclick="blockSelect(4);">
+		<a><img class = "placehold" id = "exercise_5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
-<div class="ex_block" onclick="blockSelect(5);">
-	<a><img class = "placehold" id = "exercise_6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
-</div>
+	<div class="ex_block" onclick="blockSelect(5);">
+		<a><img class = "placehold" id = "exercise_6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pictograms-nps-land-exercise-fitness-2.svg/2000px-Pictograms-nps-land-exercise-fitness-2.svg.png"></a>
+	</div>
 
 <br>
 
@@ -72,23 +76,13 @@
 Load All Images (WARNING! High bandwidth and RAM usage)
 </button>
 
+<br>
+
 <button class = "lower_body_title" onclick="putLowerPics();">
 Lower Body Exercises
 </button>
 
 <br>
-
-<button class = "upper_body_title" onclick="putUpperPics();">
-Upper Body Exercises
-</button>
-
-<br>
-<br>
-
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = "" id = "db_bench_neutral"  data-src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
-</div>
 
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "wall_sit" data-src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
@@ -102,6 +96,18 @@ Upper Body Exercises
 <a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "pb_thrust" data-src="https://4.bp.blogspot.com/-eaOdMDY_9mQ/WfihVLD62zI/AAAAAAAAlxA/VMgptWiFm4QSt4lkAom8An5kYzc9zk0QgCLcBGAs/s400/Physioball%2Bhip%2Bthrusters_1.gif"></a>
 </div>
 
+<br>
+
+<button class = "upper_body_title" onclick="putUpperPics();">
+Upper Body Exercises
+</button>
+
+<br>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = "" id = "db_bench_neutral"  data-src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>
+</div>
+
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = ""  id = "singledb_overhead" data-src="https://3.bp.blogspot.com/-3hIwJGH1s0A/WfihXUhTjGI/AAAAAAAAlxM/-gD_Oy6dB7Q-xb2o9gWri4adVx-YK0TgwCLcBGAs/s400/Quinn%2Bsingle%2BDB%2Boverhead%2Bpress_1.gif"></a>
 </div>
@@ -109,7 +115,22 @@ Upper Body Exercises
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy upper_exercises" alt = "Gif" src = ""  id = "supinated_row" data-src="https://1.bp.blogspot.com/-S7Q-AdDH-iA/WfihYRFJHiI/AAAAAAAAlxQ/Q7TM2s0D3ZwtpFGb61okCDtyWbYw4GwRgCLcBGAs/s400/Quinn%2Bsupinated%2Brow_1.gif"></a>
 </div>
-<!--
+
+<br>
+
+<button class = "core_title" onclick="putCorePics();">
+Core Exercises
+</button>
+
+<br>
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "cat_camel" data-src="https://2.bp.blogspot.com/-NRfcJuvUU84/WYnnp8-C05I/AAAAAAAAbxA/i-Gu7N9nzJM3JDMg5bX720xLrNQ2chF1QCLcBGAs/s1600/catcamel.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "supported_crunch" data-src="https://2.bp.blogspot.com/-UW355qvc6MQ/WY38IgUGvcI/AAAAAAAAc7A/QVoJaLy6N-YOSMrGLh1hmPqVO3OoWSQ0QCLcBGAs/s1600/giphy-downsized-large.gif"></a>
+</div>
+
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "bag_lunge" data-src="https://1.bp.blogspot.com/-ZL0prZiS5zs/WZwnLhA-FEI/AAAAAAAAedo/bBzrUQk2Mtwd8_wdZnjuQnSDHkLrKJgGQCLcBGAs/s1600/lunge%2Bwith%2Bbag.gif"></a>
 </div>
@@ -126,14 +147,8 @@ Upper Body Exercises
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "ext_rot_stretch" data-src="https://1.bp.blogspot.com/-xda75fkzrdc/WfihXfAoYbI/AAAAAAAAlxI/K4OjcvjzXoA7n8zBlCDMsea3QYqMPs-5QCLcBGAs/s320/Quinn%2Bexternal%2Brotator%2Bstretch%2B_1.gif"></a>
 </div>
 
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "cat_camel" data-src="https://2.bp.blogspot.com/-NRfcJuvUU84/WYnnp8-C05I/AAAAAAAAbxA/i-Gu7N9nzJM3JDMg5bX720xLrNQ2chF1QCLcBGAs/s1600/catcamel.gif"></a>
-</div>
 
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "supported_crunch" data-src="https://2.bp.blogspot.com/-UW355qvc6MQ/WY38IgUGvcI/AAAAAAAAc7A/QVoJaLy6N-YOSMrGLh1hmPqVO3OoWSQ0QCLcBGAs/s1600/giphy-downsized-large.gif"></a>
-</div>
-
+<!--
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "supported_obliques" data-src="https://3.bp.blogspot.com/-qWUfeXhLsJs/WY3-zfh1cRI/AAAAAAAAc70/tMZFizb3GF8oXXByNc-SdBjyU0W5ORWNQCLcBGAs/s1600/oblique%2Bmodified%2Bcrunch.gif"></a>
 </div>
@@ -288,7 +303,7 @@ Upper Body Exercises
 -->
 <!-- Javascript Start -->
 
-<script>
+<script> //Lazy loading of images to increase page loading speed and reduce computer resource usage
 function putPics(){
     $(function() {
         $('.lazy').lazy();
@@ -302,6 +317,11 @@ function putLowerPics(){
 function putUpperPics(){
 	$(function() {
         $('.upper_exercises').lazy();
+    });
+}
+function putCorePics(){
+	$(function() {
+        $('.core_exercises').lazy();
     });
 }
 </script>
@@ -319,48 +339,78 @@ if (done != 0 || done != 1 || done != 2 || done != 3 || done != 4 || done != 5){
 	done = 0;
 }
 
-//image selector function, grabs href from mouse position
+//Image selector function, grabs href from mouse position
 $("img").mouseover(function(){
 		activeGif = $(this).attr("src");
 		console.log(activeGif);
 	})
 
-//reassigns putExercise function target based on user input
+//Reassigns putExercise function target div based on user input
 function blockSelect(done_1){
 	done = done_1;
 	if (done_1 === 0){
-		$("#exercise_1").css( "border-style", "dotted");
-		$("#exercise_1").css( "border-width", "1px");
+		$("#exercise_1").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_2, #exercise_3, #exercise_4, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
 	}
 	else if (done_1 === 1){
-
+		
+		$("#exercise_2").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_1, #exercise_3, #exercise_4, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
 	}
-	
+	else if (done_1 === 2){
+		$("#exercise_3").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_1, #exercise_2, #exercise_4, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
+	}
+	else if (done_1 === 3){
+		$("#exercise_4").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_1, #exercise_2, #exercise_3, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
+	}
+	else if (done_1 === 4){
+		$("#exercise_5").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_1, #exercise_2, #exercise_3, #exercise_4, #exercise_6").css({ "box-shadow": "none" });
+	}
+	else{
+		$("#exercise_6").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+		$("#exercise_1, #exercise_2, #exercise_3, #exercise_4, #exercise_5").css({ "box-shadow": "none" });
+	}
 }
 
-//fill img with user choice using function
+//Fill img with user choice using function
 function putExercise(){
 
+//Iterate through placeholder divs
 switch(done) {
     case 0:
+    	//Modify gif contents and move to next div
         $("#exercise_1").attr("src", activeGif);
         done += 1;
+        //Clear highlighted div and add focus to next highlighted div
+        $("#exercise_2").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+        $("#exercise_1, #exercise_3, #exercise_4, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
         break;
     case 1:
         $("#exercise_2").attr("src", activeGif);
         done += 1;
+        $("#exercise_3").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+        $("#exercise_1, #exercise_2, #exercise_4, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
         break;
     case 2:
         $("#exercise_3").attr("src", activeGif);
         done += 1;
+        $("#exercise_4").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+        $("#exercise_1, #exercise_2, #exercise_3, #exercise_5, #exercise_6").css({ "box-shadow": "none" });
         break;
     case 3:
         $("#exercise_4").attr("src", activeGif);
         done += 1;
+        $("#exercise_5").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+        $("#exercise_1, #exercise_2, #exercise_3, #exercise_4, #exercise_6").css({ "box-shadow": "none" });
         break;
     case 4:
         $("#exercise_5").attr("src", activeGif);
         done += 1;
+        $("#exercise_6").css({ "box-shadow": "0px 0px 5px 10px #53a7ea" });
+        $("#exercise_1, #exercise_2, #exercise_3, #exercise_4, #exercise_5").css({ "box-shadow": "none" });
         break;
     default:
         $("#exercise_6").attr("src", activeGif);
@@ -368,6 +418,61 @@ switch(done) {
 }
 }
 
+//limited internet - saved links to be implemented
+
+
+/*
+https://1.bp.blogspot.com/-d8nPuWfR0c8/WMAPLWtFPJI/AAAAAAAAN5M/HxMTAxqa3zA17DicVHsc7SwdT29GcmqqgCLcB/s1600/side%2Bangle%2Bpilates%2Brollback%2Brise%2Bup.gif
+https://3.bp.blogspot.com/-pgfg3x7xcLo/WMAOmi7ahzI/AAAAAAAAN4Q/IekM_1GbBRYFAtKvqz9_nyRD6f99KtapgCLcB/s1600/side%2Bangle%2Bpilates%2Bleg%2Blowers.gif
+https://4.bp.blogspot.com/-5qehQZCzAiM/WMAOTGfA5mI/AAAAAAAAN4M/H1qIcox86zkIFg66_ahmsJOQvakWAsN0wCLcB/s1600/side%2Bangle%2Bleg%2Bpull.gif
+https://1.bp.blogspot.com/-j2C2aAqla18/WMAOrnq2zZI/AAAAAAAAN4o/dYLNDe_D3KMN3w2cRiMJvc3JywMBaaBAQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif
+https://4.bp.blogspot.com/-zavztnT-KyE/WMAOoCBCmiI/AAAAAAAAN4g/udQ2P2s-AmYHhi_3FopE2LxwpCW9JksfgCLcB/s1600/side%2Bangle%2Bforward%2Bbox%2Bstep%2Bup%2Bwith%2Blunge.gif
+https://1.bp.blogspot.com/-dlgoPXzABDU/WMAOS7HJmII/AAAAAAAAN4I/7j9O_EayOokrTh17qHhWQSR55VMOVczqQCLcB/s1600/side%2Bangle%2Bbox%2Bjump.gif
+https://3.bp.blogspot.com/-lfiJRG5xBhU/WMAN51PyScI/AAAAAAAAN38/MRlgu-_vUBwv9gOTbPpGvakzQPzsoizXQCLcB/s1600/prone%2Bscissor.gif
+https://1.bp.blogspot.com/-2O1nTnpKA8k/WMAN1qZd3WI/AAAAAAAAN3s/hIe2db1YRcQsLsjhOtfuEhMlvOnwDdqEQCLcB/s1600/plate%2Bsqueeze%2Bwalk.gif
+https://4.bp.blogspot.com/-qatZfUIJvyc/WMAN5XvxDyI/AAAAAAAAN34/1-w__LDvg1w9d7bh17KcjmpJm0ucxX1NwCLcB/s1600/pilates%2Bfrog.gif
+https://4.bp.blogspot.com/-LQyZ453C2RA/WMANX1JoSII/AAAAAAAAN3g/yptQHm_rF1QD1eN0O8yPKISPQBrbvwspQCLcB/s1600/physio-bosu%2Bball%2Bplank%2BBrittany.gif
+https://2.bp.blogspot.com/-0_gCq8GD800/WMADM_F0dNI/AAAAAAAANx4/8mmMrgM2aPghUCKsiMXZysduIJjpFmnsgCLcB/s1600/Highmark%2Boutside%2Bparachute%2Bsprints.gif
+https://4.bp.blogspot.com/-ZIPgxM7lnIw/WMALhaWkRBI/AAAAAAAAN2c/DdB9COGeN5kkPP14Pyzx4FgL0Q8ovn9hwCLcB/s1600/hand%2Bgrip%2Bbarbell%2Bhold.gif
+https://4.bp.blogspot.com/-19rfoc81bSg/WMAKvfZ_ojI/AAAAAAAAN1w/tfMbMFL5kI0CEkgS7l_0BsbwxULFIg2EQCLcB/s1600/gymnastics%2Bhold%2Bhips%2Bup.gif
+https://4.bp.blogspot.com/-ACkI1sBeb6c/WMAIj9cNLSI/AAAAAAAANz8/ihK1U4Veo_sPml1xjdk6Q1ogAeoqj__SwCLcB/s1600/farmer%2Bcarry%2BBrittany.gif
+https://3.bp.blogspot.com/-xhgwuBR4Sxc/WMAIN1AivZI/AAAAAAAANzs/Ccl_NYaeCyof7EaAHAtMElY2gnDXlUmrwCLcB/s1600/calves%2Binward%2Bfarmer%2Bcarry.gif
+https://3.bp.blogspot.com/-tW6qu6TtCTw/WMAHPzMqo7I/AAAAAAAANzA/PvK2SCb1P9EdZP-I9A_rySmjvqypg7pGQCLcB/s1600/bodybar%2Bwrist%2Bextension.gif
+https://3.bp.blogspot.com/-4ioUbVgPwhU/WMAHE4ny-3I/AAAAAAAANy0/Dofxwp8jISAmO9Mb_6EJ9XpZXpSsl8igQCLcB/s1600/bodybar%2Bwrist%2Bflexion.gif
+https://1.bp.blogspot.com/-zACPJYLyo78/WMAGhsGPaPI/AAAAAAAANyw/6BuX4nUHCKU-IGpOB231IKDJ0WrTOaxCQCLcB/s1600/band%2Bsprints.gif
+https://4.bp.blogspot.com/-ZD4XvI_Sq-Q/WMAFWUWcsLI/AAAAAAAANyg/3yqK7_i4wi8oHsKfOxyq8J6eIdFohp4agCLcB/s1600/band%2Bforearm%2Bpulldowns.gif
+https://3.bp.blogspot.com/-ZWBoL4wEGqA/WMADOXTFG9I/AAAAAAAANx8/YDjP-axox_Y7qhOU_wrKl3PZAJaZUviYwCLcB/s1600/1%2Bleg%2Bhamstring%2Bhops.gif
+https://1.bp.blogspot.com/-_dTZ1RP2LLo/WK1sa2er3OI/AAAAAAAANDc/gWZ1bR312HwVGLVbPFiNV7dfXptBpBbyQCLcB/s1600/oblique%2Bmountain%2Bclimbers.gif
+https://4.bp.blogspot.com/-n5grlRnXeLE/WK1sNZ6anqI/AAAAAAAANDI/2sWAicTjo8smVdzGtTL6g3uof3oGMH96ACLcB/s1600/mountain%2Bclimbers.gif
+https://2.bp.blogspot.com/-cpyKkXQdCS0/WK1nO2i8R3I/AAAAAAAANCk/Be6oztHm5NU2DL7idXkrkdqX8K8zzimkgCEw/s1600/side%2Bangle%2Bfull%2Bbody%2Bcrunch.gif
+https://4.bp.blogspot.com/-jlDFPhTKa2Y/WK1nQpd_GeI/AAAAAAAANCk/JXX0dNV6G4Iq--dgnKY2Kt_maFI4L0wXgCEw/s1600/side%2Bangle%2Bglute%2Bbridge.gif
+https://2.bp.blogspot.com/-PAsH1HbTqhk/WK1nH3jid7I/AAAAAAAANCk/9I4eBV6rzGMuPVpNtfcsibI42Zl0qn7yQCEw/s1600/side%2Bangle%2Bbicycle%2Bcrunch.gif
+https://1.bp.blogspot.com/-8ClOmeP-KbM/WK1nNFuw9rI/AAAAAAAANCk/OqCoNY0L0v02wdW5OyknUUIyKl-l7ArtwCEw/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif
+https://4.bp.blogspot.com/-05ASA1JnJgw/WKTaMIUbNFI/AAAAAAAAMno/M2G4-SlPZ3EpZ_DVPzrUJNqZ16G2DvHFQCLcB/s1600/TRX%2Btriceps%2B1%2Barm.gif
+https://2.bp.blogspot.com/-Qj1mE8osUwU/WKTaFk7c5DI/AAAAAAAAMng/D1gX1lfOKz0PDgx_cOCCsxZ1mPX-qnGiwCLcB/s320/TRX%2Bpike.gif
+https://2.bp.blogspot.com/-FCYtwAUvFsU/WKTaFDwn-KI/AAAAAAAAMnc/2AHvFasPIUcYx2Pvb1WdYl0DC4P8DXQYACLcB/s320/TRX%2Bchest%2Bpress.gif
+https://3.bp.blogspot.com/-4RQDYZ9yMkQ/WKTaCE3bAOI/AAAAAAAAMnY/hd2lLTgw4Ccn3c95R1xWhpHHs0MA9SgZACLcB/s320/TRX%2Bhip%2Bdrop.gif
+https://1.bp.blogspot.com/-l7m_Jb2cTCw/WKTb2A6zJZI/AAAAAAAAMrA/WTa28pKq-O0TJG1aQ-6vmAy0vT8oei--ACLcB/s320/tight%2Bgrip%2Bpushup.gif
+https://4.bp.blogspot.com/-tDC3QS6q8nY/WKTZ5ng_wUI/AAAAAAAAMnQ/g3eUsNl8kqc5x9WWLur5WmWdEei1CyrRwCLcB/s320/TRX%2B1%2Barm%2Bbicep%2Bcurl.gif
+https://3.bp.blogspot.com/-zZM-pJed0a0/WKTb2bo-7gI/AAAAAAAAMrE/uemh804txnYvSyAkZm68OyTHjE0zV88WACLcB/s320/swoop%2Bpushup.gif
+https://4.bp.blogspot.com/-nxxgKw_PsY4/WKTb2LuHN_I/AAAAAAAAMq8/es0NIDt62mksLxqIKeC9LlNkoMtnRtZSgCLcB/s320/tight%2Bgrip%2Bfist%2Bpushup.gif
+https://1.bp.blogspot.com/-NF56WExISpc/WKTbcHhG-kI/AAAAAAAAMqI/4s_QlLro4QEUKyZXE2U7qwuXocC9ZCJ8wCLcB/s320/side%2Bangle%2BRDL.gif
+https://4.bp.blogspot.com/-nlZ73bH3jR8/WKTbf7hpseI/AAAAAAAAMqU/R31gl5zeMIYUtP3WQ7_hNynEIgDc4NBBACLcB/s320/side%2Bangle%2Bgoblet%2Bsquat.gif
+https://2.bp.blogspot.com/-9nAvdSa8ed8/WKTbfHr86QI/AAAAAAAAMqQ/fp9jBfleqt4m0NYTwx0WIk-R8zFuhwe8wCLcB/s320/side%2Bangle%2Bbosu%2Bsquat.gif
+https://3.bp.blogspot.com/-JmLI7_uf4BA/WKTbJ-w0fyI/AAAAAAAAMpo/ym8wD_c_m603qyK7Pyj5ICk-xf9HWFk4gCLcB/s1600/physioball%2Bchest%2Bsqueeze%252Bpress.gif
+https://3.bp.blogspot.com/-egkwU7E7v0c/WKTatbOZJoI/AAAAAAAAMoo/nbcuQgKNx2knyxR4lYrMP4BhkHzrch89ACLcB/s1600/hip%2Bthrusters%2Blow%2Bstep.gif
+https://4.bp.blogspot.com/-Udp14Dw7e_g/WKTatkpSorI/AAAAAAAAMos/tvnleSakO5Y-zH9hxkrqxOahFSj55qWxgCLcB/s1600/front%2Beyes%2Bclosed%2Bbosu%2Bstand.gif
+https://3.bp.blogspot.com/-2bX_JGLf2Lw/WKTazlUbGeI/AAAAAAAAMo0/qIwCz4hTpwsHD4JaOlMeWyA9snTkWpJTQCLcB/s1600/glute%2Bbridge%2Bhamstring%2Bcurl%2Bwith%2Badduction.gif
+https://1.bp.blogspot.com/-f819kGf9kBY/WKTazP7v8JI/AAAAAAAAMow/CBMRmzfTkdwRX-pP29xu9l9ZaqZA2x_6wCLcB/s1600/internal%2Brotations.gif
+https://2.bp.blogspot.com/-3iFobl9B1cA/WKTamS-WhpI/AAAAAAAAMog/zi2EV7KACM0bLn829nDhR3gherwLgnOMQCLcB/s1600/front%2Bangle%2Bwide%2Bgrip%2Bseated%2Brow.gif
+https://2.bp.blogspot.com/-P23RGGKW1Wk/WKTafenAZaI/AAAAAAAAMoM/O9AMzHu3KH8KQ6vkhf1lZUAfq3JBL61XwCLcB/s1600/feetslide%2Barmcrawl.gif
+https://3.bp.blogspot.com/-BthMQtP4O3Q/WKTaej5RY2I/AAAAAAAAMoI/fhK0x-8UCvk6e20EP2AimtTqYhCRRJXsgCLcB/s1600/burpees%2Bwith%2Bpushup.gif
+https://4.bp.blogspot.com/-ezQTsiS38wo/WKTaT7YO16I/AAAAAAAAMn0/YnSzbT-sKhc0Z7vVOJqY5B_LDs9slhTrQCLcB/s1600/bar%2Btricep%2Bextension.gif
+https://1.bp.blogspot.com/-FXju8f4CDd0/WKTaUByzQrI/AAAAAAAAMn4/KC1jV9voXN4xl2QWHEWjcXXkIBrYxjATACLcB/s1600/band%2Brow%2Bpronated.gif
+*/
+
 </script>
 
 </body>
+
+
