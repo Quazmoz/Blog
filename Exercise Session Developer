@@ -6,6 +6,34 @@
 	<title></title>
 
 <style>
+	@keyframes button_animate{
+		0% {border-radius: 0px; background-color: rgba(0,20,220,.4); border-width: 5px;}
+		100% {border-radius: 15px; background-color: rgba(0,55,160,.4); border-width: 25px;}
+
+	}
+	@keyframes button_animate_out{
+		0% {border-radius: 15px; background-color: rgba(0,55,160,.4); border-width: 25px;}
+		100% {border-radius: 0px; background-color: rgba(0,20,220,.4); border-width: 5px;}
+	}
+	
+	.button_style{
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		border-width: 5px;
+		background-color: rgba(0,20,200,.4);
+		display: block;
+		border-style: solid;
+		border-color: rgba(0,45,190,.4);
+		font-size: 23px;
+	    width: 200px;
+	    white-space: 25px;
+	    text-align: center;
+	}
+	.button_style:hover{
+		animation-name: button_animate;
+		cursor: pointer;	
+		
+	}
 	.placehold{
 		width: 150px;
 	}
@@ -72,15 +100,15 @@
 <br>
 
 <!-- Exercises to be chosen and placed into placeholders -->
-<button onclick="putPics();">
-Load All Images (WARNING! High bandwidth and RAM usage)
-</button>
+<div class="button_style" onclick="putPics();">
+	Load All Images (WARNING! High bandwidth and RAM usage)
+</div>
 
 <br>
 
-<button class = "lower_body_title" onclick="putLowerPics();">
+<div class = "button_style lower_body_title" onclick="putLowerPics();">
 Lower Body Exercises
-</button>
+</div>
 
 <br>
 
@@ -96,11 +124,23 @@ Lower Body Exercises
 <a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "pb_thrust" data-src="https://4.bp.blogspot.com/-eaOdMDY_9mQ/WfihVLD62zI/AAAAAAAAlxA/VMgptWiFm4QSt4lkAom8An5kYzc9zk0QgCLcBGAs/s400/Physioball%2Bhip%2Bthrusters_1.gif"></a>
 </div>
 
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "bag_lunge" data-src="https://1.bp.blogspot.com/-ZL0prZiS5zs/WZwnLhA-FEI/AAAAAAAAedo/bBzrUQk2Mtwd8_wdZnjuQnSDHkLrKJgGQCLcBGAs/s1600/lunge%2Bwith%2Bbag.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "adductors" data-src="https://4.bp.blogspot.com/-eLYw_E-uXko/WZwnYP2v5gI/AAAAAAAAeds/ufupVPenXBUl_HMMS9OOyeT40j54QidFgCLcBGAs/s1600/front%2Bangle%2Badductors.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "ham_glute_bridge" data-src="https://3.bp.blogspot.com/-9t1Y5Z0Fvp8/WZwoSdgah1I/AAAAAAAAeeE/lCymndM2xpM683pe8lw5_IVKe8VA0H1hQCLcBGAs/s320/hamstring%2Bglute%2Bbridge%2BQuinn.gif"></a>
+</div>
+
 <br>
 
-<button class = "upper_body_title" onclick="putUpperPics();">
+<div class = "button_style upper_body_title" onclick="putUpperPics();">
 Upper Body Exercises
-</button>
+</div>
 
 <br>
 
@@ -118,11 +158,32 @@ Upper Body Exercises
 
 <br>
 
-<button class = "core_title" onclick="putCorePics();">
+<div class = "button_style core_title" onclick="putCorePics();">
 Core Exercises
-</button>
+</div>
 
 <br>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "supported_obliques" data-src="https://3.bp.blogspot.com/-qWUfeXhLsJs/WY3-zfh1cRI/AAAAAAAAc70/tMZFizb3GF8oXXByNc-SdBjyU0W5ORWNQCLcBGAs/s1600/oblique%2Bmodified%2Bcrunch.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "hip_closers" data-src="https://4.bp.blogspot.com/-g6pjXenT6v0/WYDkH9xfdEI/AAAAAAAAbiM/znr5kT8nj7wJbjRqhvxhCVQ_EjBoSqMRACLcBGAs/s320/hip%2Bclosers.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "hip_openers" data-src="https://4.bp.blogspot.com/-yRAWM9OPrvk/WYDkKiVETMI/AAAAAAAAbiU/7QBXkSaWTyE0FmCFaw4FH-ipCL1x3mmfACLcBGAs/s320/hip%2Bopeners.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "6inches" data-src="https://4.bp.blogspot.com/-5AlXhAyG_70/WYDkIY3hmNI/AAAAAAAAbiQ/RBv884cCMFcm6BORA46ezTnbJfvWfwXIwCLcBGAs/s200/6%2Binch%2Bkillers.gif"></a>
+</div>
+
+<div class = "ex_block" onclick="putExercise();">
+<a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "side_plank" data-src="https://4.bp.blogspot.com/-FlmzbV09fRY/WYDkH5QxkZI/AAAAAAAAbiI/UA1CD6VbawokcNQHTaPQrEdbGVjsxip4wCLcBGAs/s1600/front%2Bangle%2Bside%2Bplank.gif"></a>
+</div>
+
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "cat_camel" data-src="https://2.bp.blogspot.com/-NRfcJuvUU84/WYnnp8-C05I/AAAAAAAAbxA/i-Gu7N9nzJM3JDMg5bX720xLrNQ2chF1QCLcBGAs/s1600/catcamel.gif"></a>
 </div>
@@ -131,42 +192,12 @@ Core Exercises
 <a><img class = "exercise_gif lazy core_exercises" alt = "Gif" src = ""  id = "supported_crunch" data-src="https://2.bp.blogspot.com/-UW355qvc6MQ/WY38IgUGvcI/AAAAAAAAc7A/QVoJaLy6N-YOSMrGLh1hmPqVO3OoWSQ0QCLcBGAs/s1600/giphy-downsized-large.gif"></a>
 </div>
 
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "bag_lunge" data-src="https://1.bp.blogspot.com/-ZL0prZiS5zs/WZwnLhA-FEI/AAAAAAAAedo/bBzrUQk2Mtwd8_wdZnjuQnSDHkLrKJgGQCLcBGAs/s1600/lunge%2Bwith%2Bbag.gif"></a>
+<div class = "button_style stretches" onclick="putStretchesPics();">
+Stretches
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "adductors" data-src="https://4.bp.blogspot.com/-eLYw_E-uXko/WZwnYP2v5gI/AAAAAAAAeds/ufupVPenXBUl_HMMS9OOyeT40j54QidFgCLcBGAs/s1600/front%2Bangle%2Badductors.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "ham_glute_bridge" data-src="https://3.bp.blogspot.com/-9t1Y5Z0Fvp8/WZwoSdgah1I/AAAAAAAAeeE/lCymndM2xpM683pe8lw5_IVKe8VA0H1hQCLcBGAs/s320/hamstring%2Bglute%2Bbridge%2BQuinn.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "ext_rot_stretch" data-src="https://1.bp.blogspot.com/-xda75fkzrdc/WfihXfAoYbI/AAAAAAAAlxI/K4OjcvjzXoA7n8zBlCDMsea3QYqMPs-5QCLcBGAs/s320/Quinn%2Bexternal%2Brotator%2Bstretch%2B_1.gif"></a>
-</div>
-
-
-<!--
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "supported_obliques" data-src="https://3.bp.blogspot.com/-qWUfeXhLsJs/WY3-zfh1cRI/AAAAAAAAc70/tMZFizb3GF8oXXByNc-SdBjyU0W5ORWNQCLcBGAs/s1600/oblique%2Bmodified%2Bcrunch.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "hip_closers" data-src="https://4.bp.blogspot.com/-g6pjXenT6v0/WYDkH9xfdEI/AAAAAAAAbiM/znr5kT8nj7wJbjRqhvxhCVQ_EjBoSqMRACLcBGAs/s320/hip%2Bclosers.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "hip_openers" data-src="https://4.bp.blogspot.com/-yRAWM9OPrvk/WYDkKiVETMI/AAAAAAAAbiU/7QBXkSaWTyE0FmCFaw4FH-ipCL1x3mmfACLcBGAs/s320/hip%2Bopeners.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "6inches" data-src="https://4.bp.blogspot.com/-5AlXhAyG_70/WYDkIY3hmNI/AAAAAAAAbiQ/RBv884cCMFcm6BORA46ezTnbJfvWfwXIwCLcBGAs/s200/6%2Binch%2Bkillers.gif"></a>
-</div>
-
-<div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "side_plank" data-src="https://4.bp.blogspot.com/-FlmzbV09fRY/WYDkH5QxkZI/AAAAAAAAbiI/UA1CD6VbawokcNQHTaPQrEdbGVjsxip4wCLcBGAs/s1600/front%2Bangle%2Bside%2Bplank.gif"></a>
+<a><img class = "exercise_gif lazy stretches" alt = "Gif" src = ""  id = "ext_rot_stretch" data-src="https://1.bp.blogspot.com/-xda75fkzrdc/WfihXfAoYbI/AAAAAAAAlxI/K4OjcvjzXoA7n8zBlCDMsea3QYqMPs-5QCLcBGAs/s320/Quinn%2Bexternal%2Brotator%2Bstretch%2B_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
@@ -189,6 +220,8 @@ Core Exercises
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "db_curl" data-src="https://1.bp.blogspot.com/-grUwf3miHNM/WYDxzzFGW7I/AAAAAAAAbiw/JH0jbfnMpFkOxmQTze2Y98f12veU-EVzwCLcBGAs/s1600/DB%2Bcurl.gif"></a>
 </div>
 
+
+<!--
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "hip_flexor_stretch" data-src="https://1.bp.blogspot.com/-19VECxLQs_g/WYDzJjnhTvI/AAAAAAAAbjE/xkcMKzIlT9UKf0dtWxeQPTx7Ir7fO45OwCLcBGAs/s1600/hip%2Bflexor%2Bon%2Bground.gif"></a>
 </div>
@@ -305,24 +338,49 @@ Core Exercises
 
 <script> //Lazy loading of images to increase page loading speed and reduce computer resource usage
 function putPics(){
+	$(".button_style").css({"animation-name": "button_animate_out"});
     $(function() {
         $('.lazy').lazy();
     });
+    $(".button_style").hover(function() {
+	  $(this).css({"animation-name": "button_animate"});
+	});
 }
 function putLowerPics(){
+	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.lower_exercises').lazy();
     });
+    $(".button_style").hover(function() {
+	  $(this).css({"animation-name": "button_animate"});
+	});
 }
 function putUpperPics(){
+	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.upper_exercises').lazy();
     });
+    $(".button_style").hover(function() {
+	  $(this).css({"animation-name": "button_animate"});
+	});
 }
 function putCorePics(){
+	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.core_exercises').lazy();
     });
+    $(".button_style").hover(function() {
+	  $(this).css({"animation-name": "button_animate"});
+	});
+}
+function putStretchesPics(){
+	$(".button_style").css({"animation-name": "button_animate_out"});
+	$(function() {
+        $('.stretches').lazy();
+    });
+    $(".button_style").hover(function() {
+	  $(this).css({"animation-name": "button_animate"});
+	});
 }
 </script>
 
