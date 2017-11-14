@@ -6,60 +6,61 @@
 	<title></title>
 
 <style>
-	@keyframes button_animate{
-		0% {border-radius: 0px; background-color: rgba(0,20,220,.4); border-width: 5px;}
-		100% {border-radius: 15px; background-color: rgba(0,55,160,.4); border-width: 25px;}
-
-	}
-	@keyframes button_animate_out{
-		0% {border-radius: 15px; background-color: rgba(0,55,160,.4); border-width: 25px;}
-		100% {border-radius: 0px; background-color: rgba(0,20,220,.4); border-width: 5px;}
-	}
 	
 	.button_style{
-		animation-duration: 1s;
-		animation-fill-mode: forwards;
+		-webkit-transition: border-radius 1s, border-width 1s, background-color 1s; /* For Safari 3.1 to 6.0 */
+    	transition: border-radius 1s, border-width 1s, background-color 1s;
 		border-width: 5px;
 		background-color: rgba(0,20,200,.4);
 		display: block;
 		border-style: solid;
 		border-color: rgba(0,45,190,.4);
 		font-size: 23px;
+		font-family: serif;
 	    width: 200px;
 	    white-space: 25px;
 	    text-align: center;
 	}
 	.button_style:hover{
-		animation-name: button_animate;
+		border-radius: 15px; 
+		background-color: rgba(0,55,160,.4); 
+		border-width: 20px;
 		cursor: pointer;	
 		
 	}
 	.placehold{
 		width: 150px;
+		-webkit-transition: width .5s; /* Safari */
+    	transition: width .5s;
+	}
+	.placehold:hover{
+		width: 200px
 	}
 	img.exercise_gif{
-		width:150px;
+		width: 150px;
+		-webkit-transition: width .5s; /* Safari */
+    	transition: width .5s;
+	}
+	img.exercise_gif:hover{
+		width: 200px;
+		cursor: ;
 	}
 	div.ex_block{
 		display:inline-block;
 	}
-	#exercise_1:hover, #exercise_2:hover, #exercise_3:hover, #exercise_4:hover, #exercise_5:hover, #exercise_6:hover{
-		-webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-        -webkit-transition-duration: .3s; /* Safari */
-    	transition-duration: .3s;
+	#explanation{
+		font-size: 20px;
+		font-family: serif;
+		text-align: center;
 	}
-	button {
-    	font-size: 23px;
-	    padding: 0px 4px;
-	    margin: 0 auto -1.5rem auto;
-	    line-height: 50px;
-	    max-width: 50%;
-	    background-color: rgba(0,20,200,.4);
-    	border-radius: 10px;
-
+	li {
+		font-size: 20px;
+		font-family: serif;
 	}
+	/*#exercise_1:hover, #exercise_2:hover, #exercise_3:hover, #exercise_4:hover, #exercise_5:hover, #exercise_6:hover{
+		width: 200px;
+		
+	}*/
 </style>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -220,8 +221,6 @@ Stretches
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "db_curl" data-src="https://1.bp.blogspot.com/-grUwf3miHNM/WYDxzzFGW7I/AAAAAAAAbiw/JH0jbfnMpFkOxmQTze2Y98f12veU-EVzwCLcBGAs/s1600/DB%2Bcurl.gif"></a>
 </div>
 
-
-<!--
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "hip_flexor_stretch" data-src="https://1.bp.blogspot.com/-19VECxLQs_g/WYDzJjnhTvI/AAAAAAAAbjE/xkcMKzIlT9UKf0dtWxeQPTx7Ir7fO45OwCLcBGAs/s1600/hip%2Bflexor%2Bon%2Bground.gif"></a>
 </div>
@@ -333,54 +332,49 @@ Stretches
 <div class = "ex_block" onclick="putExercise();">
 <a><img class = "exercise_gif lazy" alt = "Gif" src = ""  id = "bosu_jump" data-src="https://2.bp.blogspot.com/-hL-hF6ewEnQ/WMxDO3nvIlI/AAAAAAAAOYA/CyUUi0WNxC05-ZJiHZWdwZsfwYDAr8rdgCLcB/s1600/bosu%2Bjump%2Bwarmup.gif"></a>
 </div>
--->
+
+<p id = "explanation">
+
+This application can be used to create a workout from a pre-filled list of exercises. It is a work in progress and new features and exercises will be added continually. If you found this helpful please follow me on social media, share this page, and leave your comments below!
+<br> <br>
+<h1>Instructions:</h1>
+<ol>
+	<li>Click on an exercise slot above represented by the stick figures to select that slot</li>
+		<ul>
+			<li>The selected slot will have a blue border</li>
+		</ul>
+	<li>Click on a gif to fill the selected slot with that exercise</li>
+	<li>Click the buttons to reveal the exercises for that category</li>
+</ol>
+	</p>
+
 <!-- Javascript Start -->
 
 <script> //Lazy loading of images to increase page loading speed and reduce computer resource usage
 function putPics(){
-	$(".button_style").css({"animation-name": "button_animate_out"});
     $(function() {
         $('.lazy').lazy();
     });
-    $(".button_style").hover(function() {
-	  $(this).css({"animation-name": "button_animate"});
-	});
 }
 function putLowerPics(){
-	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.lower_exercises').lazy();
     });
-    $(".button_style").hover(function() {
-	  $(this).css({"animation-name": "button_animate"});
-	});
 }
 function putUpperPics(){
-	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.upper_exercises').lazy();
     });
-    $(".button_style").hover(function() {
-	  $(this).css({"animation-name": "button_animate"});
-	});
 }
 function putCorePics(){
-	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.core_exercises').lazy();
     });
-    $(".button_style").hover(function() {
-	  $(this).css({"animation-name": "button_animate"});
-	});
 }
 function putStretchesPics(){
-	$(".button_style").css({"animation-name": "button_animate_out"});
 	$(function() {
         $('.stretches').lazy();
     });
-    $(".button_style").hover(function() {
-	  $(this).css({"animation-name": "button_animate"});
-	});
 }
 </script>
 
