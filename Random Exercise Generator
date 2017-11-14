@@ -3,8 +3,12 @@
   background-color:rgb(20, 200, 200);
   align-items:center;
   position: relative;
-  top: 15px;
-  left: 8px;
+  width: 185px;
+  font-size: 20px; 
+  height: 100%; 
+  text-align: center; 
+  white-space: normal;
+  left: 2px;
   border-radius: 15px;
   outline:none;
   font-family: Impact, Charcoal, sans-serif;
@@ -14,9 +18,10 @@
 }
 #jsgif{
   position: relative;
-  top: 15px;
-  left: 8px;
+  left: 2px;
+  width: 185px;
 }
+
 </style>
 
 <!-- div to fill with gif picture -->
@@ -25,7 +30,7 @@
 </div>
 
 <!-- Created button to generate new picture -->
-<input id = "button_style" onclick="imgGen()" style="font-family: &quot;arimo&quot;; font-size: 30px; height: 100%; text-align: center; white-space: normal; width: 270px;" type="button" value="Click here for another exercise!" />
+<input id = "button_style" onclick="imgGen()" type="button" value="Click here for another exercise!" />
 
 <!-- Javascript start -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
@@ -38,21 +43,22 @@ function imgGen(){
 var total_images = 14;
 var random_number = Math.floor((Math.random()*total_images));
 var random_img = new Array();
-random_img[0] = '<a href="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"><img src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>';
-random_img[1] = '<a href="https://4.bp.blogspot.com/-cZjQWbEYfbY/WLBGDMQkYzI/AAAAAAAANIQ/JDL4nB4j1xkYylhhsflpN9HWJ37_Wx05ACLcB/s1600/band%2Brow%2Bpronated.gif"><img src="https://4.bp.blogspot.com/-cZjQWbEYfbY/WLBGDMQkYzI/AAAAAAAANIQ/JDL4nB4j1xkYylhhsflpN9HWJ37_Wx05ACLcB/s1600/band%2Brow%2Bpronated.gif"></a>';
-random_img[2] = '<a href="https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif"><img src="https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif"></a>';
-random_img[3] = '<a href="https://1.bp.blogspot.com/-z9KPHV1Hu8s/WLBG660N9OI/AAAAAAAANIk/_lbOrlHccroWQdxuGjRyzd75_x9HLWLKQCEw/s1600/back%2Bangle%2Bsupinated%2Bbent%2Bover%2Brow.gif"><img src="https://1.bp.blogspot.com/-z9KPHV1Hu8s/WLBG660N9OI/AAAAAAAANIk/_lbOrlHccroWQdxuGjRyzd75_x9HLWLKQCEw/s1600/back%2Bangle%2Bsupinated%2Bbent%2Bover%2Brow.gif"></a>';
-random_img[4] = '<a href="https://2.bp.blogspot.com/-m7j9mGwiFZw/WLBEecqhjrI/AAAAAAAANIA/W1AlpT9DKiER2nm_b202OkWTDYnT1YBVgCLcB/s1600/side%2Bangle%2Boverhead%2Bpress.gif"><img src="https://2.bp.blogspot.com/-m7j9mGwiFZw/WLBEecqhjrI/AAAAAAAANIA/W1AlpT9DKiER2nm_b202OkWTDYnT1YBVgCLcB/s1600/side%2Bangle%2Boverhead%2Bpress.gif"></a>';
-random_img[5] = '<a href="https://4.bp.blogspot.com/-MkHxS7cZ5uA/WLBQCq8ViCI/AAAAAAAANKM/belAEX7btu4KfyvR0cKqWejlKEnkpQD1ACLcB/s1600/posterior%2Bangle%2Blying%2Btricep%2Bext.gif"><img src="https://4.bp.blogspot.com/-MkHxS7cZ5uA/WLBQCq8ViCI/AAAAAAAANKM/belAEX7btu4KfyvR0cKqWejlKEnkpQD1ACLcB/s1600/posterior%2Bangle%2Blying%2Btricep%2Bext.gif"></a>';
-random_img[6] = '<a href="https://1.bp.blogspot.com/-c8wlCB9fhEg/WLBP4iBG4AI/AAAAAAAANJ8/eqikqliO-ogTSjVLz8KSxoBgGoLYOTQTQCLcB/s1600/side%2Bangle%2Blying%2Btricep%2Bext.gif"><img src="https://1.bp.blogspot.com/-c8wlCB9fhEg/WLBP4iBG4AI/AAAAAAAANJ8/eqikqliO-ogTSjVLz8KSxoBgGoLYOTQTQCLcB/s1600/side%2Bangle%2Blying%2Btricep%2Bext.gif"></a>';
-random_img[7] = '<a href="https://1.bp.blogspot.com/-Yz8PMyC3lvM/WLCCAQBsnXI/AAAAAAAANLc/W58Shwd2ZhAE9sp1QtGMvfXYgU8qgWArgCLcB/s1600/DB%2Bcurl.gif"><img src="https://1.bp.blogspot.com/-Yz8PMyC3lvM/WLCCAQBsnXI/AAAAAAAANLc/W58Shwd2ZhAE9sp1QtGMvfXYgU8qgWArgCLcB/s1600/DB%2Bcurl.gif"></a>';
-random_img[8] = '<a href="https://1.bp.blogspot.com/-F5Y-3pRexgI/WLCCAT9BbZI/AAAAAAAANLg/z0J8vMeEuWkdcnyG-dnSZbhof0rcA_0RQCLcB/s1600/side%2Bangle%2BDB%2Bcurl.gif"><img src="https://1.bp.blogspot.com/-F5Y-3pRexgI/WLCCAT9BbZI/AAAAAAAANLg/z0J8vMeEuWkdcnyG-dnSZbhof0rcA_0RQCLcB/s1600/side%2Bangle%2BDB%2Bcurl.gif"></a>';
-random_img[9] = '<a href="https://1.bp.blogspot.com/-eTpuht_XAaY/WKyW9RoqKXI/AAAAAAAAM_E/c27p5n1DZjIlhE99GrbqqY_C5ayZF7ChgCLcB/s1600/side%2Bangle%2Bglute%2Bbridge.gif"><img src="https://1.bp.blogspot.com/-eTpuht_XAaY/WKyW9RoqKXI/AAAAAAAAM_E/c27p5n1DZjIlhE99GrbqqY_C5ayZF7ChgCLcB/s1600/side%2Bangle%2Bglute%2Bbridge.gif"></a>';
-random_img[10] = '<a href="https://3.bp.blogspot.com/-OSzcivq9HZ4/WKtgZ_1c3ZI/AAAAAAAAM-o/6YX2uZuUR8AW8XeABEBIuYB9jJQ1NqXEACLcB/s1600/tight%2Bgrip%2Bfist%2Bpushup.gif"><img src="https://3.bp.blogspot.com/-OSzcivq9HZ4/WKtgZ_1c3ZI/AAAAAAAAM-o/6YX2uZuUR8AW8XeABEBIuYB9jJQ1NqXEACLcB/s1600/tight%2Bgrip%2Bfist%2Bpushup.gif"></a>';
-random_img[11] = '<a href="https://4.bp.blogspot.com/-6-fbmqPrraM/WKtgbHqNlUI/AAAAAAAAM-s/QGt8IL6biLwXS0q-cCdQsIN6QGgRztdtwCLcB/s1600/side%2Bangle%2Bpike%2Bwith%2Bslides.gif"><img src="https://4.bp.blogspot.com/-6-fbmqPrraM/WKtgbHqNlUI/AAAAAAAAM-s/QGt8IL6biLwXS0q-cCdQsIN6QGgRztdtwCLcB/s1600/side%2Bangle%2Bpike%2Bwith%2Bslides.gif"></a>';
-random_img[12] = '<a href="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"><img src="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"></a>';
-random_img[13] = '<a href="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"><img src="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"></a>';
-random_img[14] = '<a href="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"><img src="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"></a>';
+random_img[0] = '<a href="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"><img id = "gifput" src="https://4.bp.blogspot.com/-5hVNrJuBuhg/WLBEvAOocpI/AAAAAAAANIE/BxPDgcook7MwLR96rXmzR9VsoVDhB7N6ACLcB/s1600/neutral%2Bgrip%2BDB%2Bbench.gif"></a>';
+random_img [1] = '<a href="https://4.bp.blogspot.com/-cZjQWbEYfbY/WLBGDMQkYzI/AAAAAAAANIQ/JDL4nB4j1xkYylhhsflpN9HWJ37_Wx05ACLcB/s1600/band%2Brow%2Bpronated.gif"><img id = "gifput" src="https://4.bp.blogspot.com/-cZjQWbEYfbY/WLBGDMQkYzI/AAAAAAAANIQ/JDL4nB4j1xkYylhhsflpN9HWJ37_Wx05ACLcB/s1600/band%2Brow%2Bpronated.gif"></a>';
+random_img[2] = '<a href="https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif"><img id = "gifput" src="https://2.bp.blogspot.com/-vdau-h_TI-c/WLBHXY6_7YI/AAAAAAAANI0/1TIu0vHccyEzf0guYXGc22vpZVankNGtwCEw/s1600/supinated%2Bbent%2Bover%2Brow.gif"></a>';
+random_img[3] = '<a href="https://1.bp.blogspot.com/-z9KPHV1Hu8s/WLBG660N9OI/AAAAAAAANIk/_lbOrlHccroWQdxuGjRyzd75_x9HLWLKQCEw/s1600/back%2Bangle%2Bsupinated%2Bbent%2Bover%2Brow.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-z9KPHV1Hu8s/WLBG660N9OI/AAAAAAAANIk/_lbOrlHccroWQdxuGjRyzd75_x9HLWLKQCEw/s1600/back%2Bangle%2Bsupinated%2Bbent%2Bover%2Brow.gif"></a>';
+random_img[4] = '<a href="https://2.bp.blogspot.com/-m7j9mGwiFZw/WLBEecqhjrI/AAAAAAAANIA/W1AlpT9DKiER2nm_b202OkWTDYnT1YBVgCLcB/s1600/side%2Bangle%2Boverhead%2Bpress.gif"><img id = "gifput" src="https://2.bp.blogspot.com/-m7j9mGwiFZw/WLBEecqhjrI/AAAAAAAANIA/W1AlpT9DKiER2nm_b202OkWTDYnT1YBVgCLcB/s1600/side%2Bangle%2Boverhead%2Bpress.gif"></a>';
+random_img[5] = '<a href="https://4.bp.blogspot.com/-MkHxS7cZ5uA/WLBQCq8ViCI/AAAAAAAANKM/belAEX7btu4KfyvR0cKqWejlKEnkpQD1ACLcB/s1600/posterior%2Bangle%2Blying%2Btricep%2Bext.gif"><img id = "gifput" src="https://4.bp.blogspot.com/-MkHxS7cZ5uA/WLBQCq8ViCI/AAAAAAAANKM/belAEX7btu4KfyvR0cKqWejlKEnkpQD1ACLcB/s1600/posterior%2Bangle%2Blying%2Btricep%2Bext.gif"></a>';
+random_img[6] = '<a href="https://1.bp.blogspot.com/-c8wlCB9fhEg/WLBP4iBG4AI/AAAAAAAANJ8/eqikqliO-ogTSjVLz8KSxoBgGoLYOTQTQCLcB/s1600/side%2Bangle%2Blying%2Btricep%2Bext.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-c8wlCB9fhEg/WLBP4iBG4AI/AAAAAAAANJ8/eqikqliO-ogTSjVLz8KSxoBgGoLYOTQTQCLcB/s1600/side%2Bangle%2Blying%2Btricep%2Bext.gif"></a>';
+random_img[7] = '<a href="https://1.bp.blogspot.com/-Yz8PMyC3lvM/WLCCAQBsnXI/AAAAAAAANLc/W58Shwd2ZhAE9sp1QtGMvfXYgU8qgWArgCLcB/s1600/DB%2Bcurl.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-Yz8PMyC3lvM/WLCCAQBsnXI/AAAAAAAANLc/W58Shwd2ZhAE9sp1QtGMvfXYgU8qgWArgCLcB/s1600/DB%2Bcurl.gif"></a>';
+random_img[8] = '<a href="https://1.bp.blogspot.com/-F5Y-3pRexgI/WLCCAT9BbZI/AAAAAAAANLg/z0J8vMeEuWkdcnyG-dnSZbhof0rcA_0RQCLcB/s1600/side%2Bangle%2BDB%2Bcurl.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-F5Y-3pRexgI/WLCCAT9BbZI/AAAAAAAANLg/z0J8vMeEuWkdcnyG-dnSZbhof0rcA_0RQCLcB/s1600/side%2Bangle%2BDB%2Bcurl.gif"></a>';
+random_img[9] = '<a href="https://1.bp.blogspot.com/-eTpuht_XAaY/WKyW9RoqKXI/AAAAAAAAM_E/c27p5n1DZjIlhE99GrbqqY_C5ayZF7ChgCLcB/s1600/side%2Bangle%2Bglute%2Bbridge.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-eTpuht_XAaY/WKyW9RoqKXI/AAAAAAAAM_E/c27p5n1DZjIlhE99GrbqqY_C5ayZF7ChgCLcB/s1600/side%2Bangle%2Bglute%2Bbridge.gif"></a>';
+random_img[10] = '<a href="https://3.bp.blogspot.com/-OSzcivq9HZ4/WKtgZ_1c3ZI/AAAAAAAAM-o/6YX2uZuUR8AW8XeABEBIuYB9jJQ1NqXEACLcB/s1600/tight%2Bgrip%2Bfist%2Bpushup.gif"><img id = "gifput" src="https://3.bp.blogspot.com/-OSzcivq9HZ4/WKtgZ_1c3ZI/AAAAAAAAM-o/6YX2uZuUR8AW8XeABEBIuYB9jJQ1NqXEACLcB/s1600/tight%2Bgrip%2Bfist%2Bpushup.gif"></a>';
+random_img[11] = '<a href="https://4.bp.blogspot.com/-6-fbmqPrraM/WKtgbHqNlUI/AAAAAAAAM-s/QGt8IL6biLwXS0q-cCdQsIN6QGgRztdtwCLcB/s1600/side%2Bangle%2Bpike%2Bwith%2Bslides.gif"><img id = "gifput" src="https://4.bp.blogspot.com/-6-fbmqPrraM/WKtgbHqNlUI/AAAAAAAAM-s/QGt8IL6biLwXS0q-cCdQsIN6QGgRztdtwCLcB/s1600/side%2Bangle%2Bpike%2Bwith%2Bslides.gif"></a>';
+random_img[12] = '<a href="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"><img id = "gifput" src="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AAAAAAAANHY/7qCbVYuAG1gHyIsPpc09c6DTmRt1pGwuQCLcB/s1600/side%2Bangle%2Bpilates%2Bbike.gif"></a>';
+random_img[13] = '<a href="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"></a>';
+random_img[14] = '<a href="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"><img id = "gifput" src="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"></a>';
 $("#jsgif").html(random_img[random_number]);
+$("#gifput").css({"position": "relative",  "left": "2px", "width": "185px"})
 }
 imgGen();</script>
