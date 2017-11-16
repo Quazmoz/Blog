@@ -116,11 +116,11 @@ Lower Body Exercises
 <br>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "wall_sit" data-src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Wall sit" src = ""  id = "wall_sit" data-src="https://3.bp.blogspot.com/-UklKhO3qEp0/WfihW2XnSzI/AAAAAAAAlxE/M-RwRdDRVzICe6doTan2Gemz4ltcg6FIQCLcBGAs/s1600/Quinn%2Bchair%2Bsit_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
-<a><img class = "exercise_gif lazy lower_exercises" alt = "Gif" src = ""  id = "lunge_rotation" data-src="https://2.bp.blogspot.com/-NmLWWhs74Lc/WfihU2zVqgI/AAAAAAAAlw8/Lns7QrXT288jiK9w4Yr6nMELhfkA2XRqgCLcBGAs/s1600/Lunge%2Bwith%2Btorso%2Brotation%2BQuinn%2B_1.gif"></a>
+<a><img class = "exercise_gif lazy lower_exercises" alt = "Lunge with rotation" src = ""  id = "lunge_rotation" data-src="https://2.bp.blogspot.com/-NmLWWhs74Lc/WfihU2zVqgI/AAAAAAAAlw8/Lns7QrXT288jiK9w4Yr6nMELhfkA2XRqgCLcBGAs/s1600/Lunge%2Bwith%2Btorso%2Brotation%2BQuinn%2B_1.gif"></a>
 </div>
 
 <div class = "ex_block" onclick="putExercise();">
