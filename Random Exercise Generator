@@ -21,6 +21,16 @@
   display: block;
 }
 
+#button_style:hover{
+  cursor: pointer;
+  background-color: rgb(10, 190, 255);
+  border-color: transparent;
+}
+
+#button_style:active{
+  border-color: rgb(10, 190, 255);
+}
+
 </style>
 
 <!-- div to fill with gif picture -->
