@@ -2,13 +2,12 @@
 #button_style{
   background-color:rgb(20, 200, 200);
   align-items:center;
-  position: relative;
-  width: 185px;
   font-size: 20px; 
   height: 100%; 
   text-align: center; 
   white-space: normal;
-  left: 2px;
+  margin:auto;
+  float:left;
   border-radius: 15px;
   outline:none;
   font-family: Impact, Charcoal, sans-serif;
@@ -17,9 +16,9 @@
    box-shadow:         inset 0 0 10px #000000;
 }
 #jsgif{
-  position: relative;
-  left: 2px;
-  width: 185px;
+  margin:auto;
+  height: 100%;
+  display: block;
 }
 
 </style>
@@ -33,6 +32,8 @@
 <input id = "button_style" onclick="imgGen()" type="button" value="Click here for another exercise!" />
 
 <!-- Javascript start -->
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
 <script type="text/javascript">
@@ -59,6 +60,6 @@ random_img[12] = '<a href="https://2.bp.blogspot.com/-t7-s0QIn5lw/WK8xN8Ms2bI/AA
 random_img[13] = '<a href="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"><img id = "gifput" src="https://1.bp.blogspot.com/-aXgTAfFP7w4/WK8xiSXvCQI/AAAAAAAANHc/rGfGkw5SHRYa-nsMbtsiHrXZYU8IlejkACLcB/s1600/prone%2Bscissor.gif"></a>';
 random_img[14] = '<a href="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"><img id = "gifput" src="https://3.bp.blogspot.com/-esf5aN9Rr4c/WK8xjPkqQMI/AAAAAAAANHg/Azd1ltRGFQcgefW5pkQFIoORf5YJMazBwCLcB/s1600/side%2Bangle%2BBW%2Bshoulder%2Bpress.gif"></a>';
 $("#jsgif").html(random_img[random_number]);
-$("#gifput").css({"position": "relative",  "left": "2px", "width": "185px"})
+//$("#gifput").css({"position": "relative",  "left": "2px", "width": "356px"})
 }
 imgGen();</script>
