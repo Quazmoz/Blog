@@ -26,7 +26,10 @@
 		background-color: rgba(0,55,160,.4); 
 		border-width: 20px;
 		cursor: pointer;	
-		
+	}
+	.button_style:active{
+		background-color: rgba(0,95,240,.4);
+		border-color: rgba(0,65,210,.4);
 	}
 	.placehold{
 		width: 150px;
@@ -464,7 +467,7 @@ Core Exercises
 <a><img class = "exercise_gif lazy core_exercises" alt = "Supported crunch" src = ""  id = "supported_crunch" data-src="https://2.bp.blogspot.com/-UW355qvc6MQ/WY38IgUGvcI/AAAAAAAAc7A/QVoJaLy6N-YOSMrGLh1hmPqVO3OoWSQ0QCLcBGAs/s1600/giphy-downsized-large.gif"></a>
 </div>
 
-<div class = "button_style stretches" onclick="putStretchesPics();">
+<div class = "button_style" onclick="putStretchesPics();">
 Stretches
 </div>
 
@@ -523,40 +526,19 @@ This application is a work in progress and new features and exercises will be ad
 
 <!-- Javascript Start -->
 
-<script> //Lazy loading of images to increase page loading speed and reduce computer resource usage
-function putPics(){
-    $(function() {
-        $('.lazy').lazy();
-    });
-}
-function putLowerPics(){
-	$(function() {
-        $('.lower_exercises').lazy();
-    });
-}
-function putUpperPics(){
-	$(function() {
-        $('.upper_exercises').lazy();
-    });
-}
-function putCorePics(){
-	$(function() {
-        $('.core_exercises').lazy();
-    });
-}
-function putStretchesPics(){
-	$(function() {
-        $('.stretches').lazy();
-    });
-}
-</script>
-
 <script>
 
 //declare variables
 if (typeof activeGif === undefined){
 	var activeGif;
 }
+
+var pics = 0;
+var lowerPics = 0;
+var upperPics = 0;
+var corePics = 0;
+var stretchesPics = 0;
+
 
 var done;
 
@@ -643,8 +625,78 @@ switch(done) {
 }
 }
 
-//limited internet - saved links to be implemented
+</script>
 
+<script> //Lazy loading of images to increase page loading speed and reduce computer resource usage
+function putPics(){
+    if (pics == 0){
+	    $(function() {
+	        $(".lazy").lazy();
+	        pics = 1;
+	        lowerPics = 1;
+	        upperPics = 1;
+	        corePics = 1;
+	        stretchesPics = 1;
+	        $(".lazy").css({"display": "inline-block"})
+	    });
+	}
+	else{
+		$(".lazy").css({"display": "none"});
+		pics = 0;
+	}
+}
+function putLowerPics(){
+	if (lowerPics == 0){
+		$(function() {
+	        $(".lower_exercises").lazy();
+	        lowerPics = 1;
+	        $(".lower_exercises").css({"display": "inline-block"})
+	    });
+	}
+	else{
+		$(".lower_exercises").css({"display": "none"});
+		lowerPics = 0;
+	}
+}
+function putUpperPics(){
+	if (upperPics == 0){
+		$(function() {
+	        $(".upper_exercises").lazy();
+	        upperPics = 1;
+	        $(".upper_exercises").css({"display": "inline-block"})
+	    });
+	}
+	else{
+		$(".upper_exercises").css({"display": "none"});
+		upperPics = 0;
+	}
+}
+function putCorePics(){
+	if (corePics == 0){
+		$(function() {
+	        $(".core_exercises").lazy();
+	        corePics = 1;
+	        $(".core_exercises").css({"display": "inline-block"})
+	    });
+	}
+	else{
+		$(".core_exercises").css({"display": "none"});
+		corePics = 0;
+	}
+}
+function putStretchesPics(){
+	if (stretchesPics == 0){
+		$(function() {
+	        $(".stretches").lazy();
+	        stretchesPics = 1;
+	        $(".stretches").css({"display": "inline-block"})
+	    });
+	}
+	else{
+		$(".stretches").css({"display": "none"});
+		stretchesPics = 0;
+	}
+}
 </script>
 
 </body>
